@@ -1,1 +1,0 @@
-# Provider-Language-Agnostic Tips

@@ -1,4 +1,4 @@
-# code-agent-tricks
+# coding-agent-templates
 
 Reusable instructions for coding agents.
 
