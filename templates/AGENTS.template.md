@@ -145,12 +145,21 @@ superseded information that no longer helps readers understand the current syste
 ## Engineering Principles
 
 - Understand the relevant requirements and existing code before editing; fit changes to the project's architecture.
+- All implementations, especially in data processing, must use reproducible programmatic reasoning grounded in logic
+  or systematic methods and must not rely solely on large language model analysis, unless the requester has explicitly
+  discussed and approved that exception.
 - Make focused, maintainable changes and preserve unrelated work.
 - Keep responsibilities cohesive and dependency boundaries explicit. Introduce abstractions for demonstrated needs.
 - Follow established language and framework conventions and respect documented public contracts.
 - Handle failures explicitly, add useful error context, and avoid silently discarding errors.
 - Keep dependencies and lifecycle behavior explicit; avoid unexpected initialization or import-time side effects.
 - Use comments to explain non-obvious behavior, constraints, or decisions that the code alone does not make clear.
+
+## Change Planning and Commits
+
+- For large changes, always break the work into logical, independently implementable parts. Implement and commit each
+  part separately.
+- Commit messages must follow the format `type(scope): <message>`.
 
 ## Adapting This File
 
@@ -248,7 +257,8 @@ Record the project's concrete completion requirements:
 
 - Required checks and test environments: `<REQUIRED_CHECKS_AND_TEST_ENVIRONMENTS>`.
 - Optional, expensive, or external checks and when to run them: `<OPTIONAL_CHECKS_AND_RUN_CONDITIONS>`.
-- Commit, review, and pull request conventions: `<COMMIT_AND_REVIEW_CONVENTIONS>`.
+- Additional commit, review, and pull request conventions: `<COMMIT_AND_REVIEW_CONVENTIONS>`. Keep these consistent
+  with [Change Planning and Commits](#change-planning-and-commits).
 
 ### Scoped Instructions
 
