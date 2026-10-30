@@ -149,8 +149,10 @@ superseded information that no longer helps readers understand the current syste
   or systematic methods and must not rely solely on large language model analysis, unless the requester has explicitly
   discussed and approved that exception.
 - Make focused, maintainable changes and preserve unrelated work.
+- Check for existing components to reuse before writing a new one.
 - Keep responsibilities cohesive and dependency boundaries explicit. Introduce abstractions for demonstrated needs.
 - Follow established language and framework conventions and respect documented public contracts.
+- Use descriptive names for variables and methods.
 - Handle failures explicitly, add useful error context, and avoid silently discarding errors.
 - Keep dependencies and lifecycle behavior explicit; avoid unexpected initialization or import-time side effects.
 - Use comments to explain non-obvious behavior, constraints, or decisions that the code alone does not make clear.
@@ -159,7 +161,11 @@ superseded information that no longer helps readers understand the current syste
 
 - For large changes, always break the work into logical, independently implementable parts. Implement and commit each
   part separately.
-- Commit messages must follow the format `type(scope): <message>`.
+- Commit messages must follow the format `type(scope): <message>`. Use present-tense summaries, for example
+  `feat(timeline): Improve timeline pagination`.
+- Squash development commits before merging.
+- Pull requests should link relevant issues or tickets, document any migrations and environment changes, include
+  screenshots for UI work, and list validation commands.
 
 ## Adapting This File
 
