@@ -1,6 +1,6 @@
-# coding-agent-templates
+# coding-agent-toolkit
 
-Reusable instructions for coding agents.
+A reusable toolkit for AI coding agents. It currently includes an AGENTS.md instruction template, with a broader scope for skills and other development resources.
 
 ## AGENTS.md template
 
