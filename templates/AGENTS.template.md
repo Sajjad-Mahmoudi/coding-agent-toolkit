@@ -148,14 +148,17 @@ superseded information that no longer helps readers understand the current syste
 - All implementations, especially in data processing, must use reproducible programmatic reasoning grounded in logic
   or systematic methods and must not rely solely on large language model analysis, unless the requester has explicitly
   discussed and approved that exception.
-- Make focused, maintainable changes and preserve unrelated work.
+- Make maintainable changes that fit the existing architecture. Keep changes focused and preserve unrelated work.
 - Check for existing components to reuse before writing a new one.
-- Keep responsibilities cohesive and dependency boundaries explicit. Introduce abstractions for demonstrated needs.
+- Preserve modularity, separation of concerns, and clear ownership boundaries. Keep responsibilities cohesive and
+  dependency boundaries explicit. Introduce abstractions for demonstrated needs.
+- Avoid hidden coupling, global side effects, and cross-layer imports that violate architectural boundaries.
 - Follow established language and framework conventions and respect documented public contracts.
 - Use descriptive names for variables and methods.
 - Handle failures explicitly, add useful error context, and avoid silently discarding errors.
 - Keep dependencies and lifecycle behavior explicit; avoid unexpected initialization or import-time side effects.
-- Use comments to explain non-obvious behavior, constraints, or decisions that the code alone does not make clear.
+- Prefer clear, direct implementations. Add comments or docstrings only to explain non-obvious behavior, important
+  decisions, or public interfaces.
 
 ## Change Planning and Commits
 
@@ -182,6 +185,9 @@ below as part of normal project work. The user should not have to fill in facts 
 - Keep the profile current when layout, tooling, commands, interfaces, or conventions change, and summarize updates
   in the work report. Preserve the reusable policies above; put project-specific details in the profile or scoped files.
 - Keep guidance concise and actionable. Link to specifications and configuration for detail instead of copying them.
+- Adopt optional instruction modules only for the languages or topics actually in use. Record their local paths and
+  scope in the Project Profile, and explicitly read the referenced files before relevant work; Markdown links alone
+  do not guarantee that every coding agent will load them.
 
 ## Project Profile (Agent-Maintained)
 
@@ -229,6 +235,7 @@ Record non-obvious conventions for the languages and frameworks actually used, w
 where possible. Cover typing, errors, logging, state, concurrency, or lifecycle rules only where they are relevant.
 
 - Language and framework rules: `<LANGUAGE_AND_FRAMEWORK_RULES_OR_LINKS>`.
+- Applicable instruction modules, local paths, and scope, or none: `<INSTRUCTION_MODULES_AND_SCOPE>`.
 - Compatibility, versioning, and deprecation requirements: `<COMPATIBILITY_REQUIREMENTS>`.
 
 ### Configuration & Interfaces
