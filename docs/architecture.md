@@ -33,15 +33,17 @@ Reusable defaults guide new projects. An explicit target-project constraint or r
 | Principal-engineer role and capabilities | [Initialisation prompt](../prompts/initialisation.md#first-prompt) | Preserve the full role in the workflow prompt |
 | Specifications, stack, architecture, Git branches, best practices, and ownership | [Initialisation prompt](../prompts/initialisation.md#first-prompt) | Establish `main` and `dev` for new repositories; preserve existing workflows unless changing them is requested |
 | Maintainability, modularity, ownership, coupling, and comments | [Shared engineering principles](../templates/AGENTS.template.md#engineering-principles) | These rules apply across languages despite appearing under Python on the page |
+| Python source layout, dependency metadata, module ownership, and entry points | [Python project structure](../instructions/languages/python/structure.md) | Keep the guidance reusable; choose domain modules from each project's responsibilities |
 | Python runtime, tooling, typing, models, paths, logging, errors, lifecycle, and testing | [Python practices](../instructions/languages/python/practices.md) | Keep Python-specific rules out of the shared base |
 | Typed settings, files, secrets, and CLI overrides | [Python configuration](../instructions/languages/python/configuration.md) | Separate configuration policy from everyday coding practices |
 
 ### Configuration clarifications
 
 - Standardize on `config/settings.yaml.example` and maintain one template. The original page also used `settings.example.yaml`; the updated page and this toolkit use the canonical name consistently.
-- Settings code belongs in the actual source package's `config/`; runtime YAML belongs in the project root's `config/`. These directories serve different purposes.
+- Settings code belongs in the actual source package's `configs/`; runtime YAML belongs in the project root's `config/`. These directories serve different purposes.
+- Keep settings-package responsibilities in the [Python configuration module](../instructions/languages/python/configuration.md#settings-package). Create settings and initialize logging during application startup, keeping imports free of runtime initialization.
 - Define runtime source precedence in the [Python configuration module](../instructions/languages/python/configuration.md#settings-and-source-priority). Preserve explicit existing-project constraints and record deliberate departures in the Project Profile; change override behavior only as part of an intended configuration migration.
-- Treat `SettingsFactory.create_settings_with_validation` as an existing-project contract to preserve, not a class every new project must invent.
+- Preserve existing public settings-loading contracts without requiring a particular factory or class name.
 
 ## Add languages and other tooling
 
