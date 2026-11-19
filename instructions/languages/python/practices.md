@@ -4,9 +4,8 @@ Use with the module's [entry point](README.md) and [configuration instructions](
 
 ## Language and tooling
 
-- Target Python 3.14+ for new projects and use modern type hints such as `str | None`, `list[str]`, and `dict[str, Any]`. Respect an existing project's declared runtime unless a migration is part of the task.
+- Target Python 3.14+ for new projects and use modern type hints. Respect an existing project's declared runtime unless a migration is part of the task.
 - Use Ruff for both linting and formatting. Record the project's exact commands and configuration in the Project Profile.
-- Do not add backward-compatibility code unless explicitly requested.
 
 ## Data modeling
 
