@@ -6,12 +6,12 @@ Use with the module's [entry point](README.md) and [Python practices](practices.
 
 | Location in the target project | Responsibility |
 | --- | --- |
-| `<source-root>/<package>/model_runtime/config/` | Typed settings models and the `pydantic-settings` loader |
+| `<source-root>/<package>/config/` | Typed settings models and the `pydantic-settings` loader |
 | `config/settings.yaml` | Local, non-secret runtime settings |
 | `config/settings.yaml.example` | Committed template for user-configurable settings |
 | Environment variables or local `.env` files | Secrets and environment-specific overrides |
 
-Resolve the source directory from the actual project layout, for example `src/my_app/model_runtime/config/`, and record it in the Project Profile. Do not create literal placeholder directories. The source package's `model_runtime/config/` holds Python code; the root `config/` holds configuration data.
+Resolve the source directory from the actual project layout, for example `src/my_app/config/`, and record it in the Project Profile. Do not create literal placeholder directories. The source package's `config/` holds Python code; the root `config/` holds configuration data.
 
 ## Settings and source priority
 
@@ -42,7 +42,7 @@ Load runtime settings in the following priority order. The first source that sup
 
 ## Add a setting
 
-- Define new settings as typed models in `<source-root>/<package>/model_runtime/config/` and compose them on `AppSettings`.
+- Define new settings as typed models in `<source-root>/<package>/config/` and compose them on `AppSettings`.
 - Mirror user-configurable, non-secret fields in `config/settings.yaml.example`.
 - Document secret environment variable names without their values.
 - Preserve source precedence and CLI override behavior. Use focused checks for effective values and relevant invalid-input cases.

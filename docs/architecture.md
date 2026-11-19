@@ -39,7 +39,7 @@ Reusable defaults guide new projects. An explicit target-project constraint or r
 ### Configuration clarifications
 
 - Standardize on `config/settings.yaml.example` and maintain one template. The original page also used `settings.example.yaml`; the updated page and this toolkit use the canonical name consistently.
-- Settings code belongs in the actual source package's `model_runtime/config/`; runtime YAML belongs in the project root's `config/`. These directories serve different purposes.
+- Settings code belongs in the actual source package's `config/`; runtime YAML belongs in the project root's `config/`. These directories serve different purposes.
 - Define runtime source precedence in the [Python configuration module](../instructions/languages/python/configuration.md#settings-and-source-priority). Preserve explicit existing-project constraints and record deliberate departures in the Project Profile; change override behavior only as part of an intended configuration migration.
 - Treat `SettingsFactory.create_settings_with_validation` as an existing-project contract to preserve, not a class every new project must invent.
 
