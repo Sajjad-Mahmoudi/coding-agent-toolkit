@@ -158,8 +158,8 @@ superseded information that no longer helps readers understand the current syste
 - Handle failures explicitly, add useful error context, and avoid silently discarding errors.
 - Keep dependencies and lifecycle behavior explicit; avoid unexpected initialization or import-time side effects.
 - Prefer clear, direct implementations.
-- Add a concise one-line comment at the top of each module and above every main class, function, or significant block
-  to state its purpose. Keep it short and factual.
+- Use a concise one-line docstring as the first statement of each Python module and main class, function, or method.
+- Use comments on significant blocks to explain non-obvious behavior, constraints, or decisions.
 
 ## Change Planning and Commits
 
