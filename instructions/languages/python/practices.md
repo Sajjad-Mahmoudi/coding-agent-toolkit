@@ -7,6 +7,7 @@ Use with the module's [entry point](README.md), [project structure](structure.md
 - Target Python 3.14+ for new projects and use modern type hints. Respect an existing project's declared runtime unless a migration is part of the task.
 - Prefer uv for dependency and environment management in new projects. Keep metadata, dependency groups, and lockfiles consistent with the [project structure](structure.md#project-files). Respect an existing project's package manager.
 - Use Ruff for both linting and formatting. Record the project's exact commands and configuration in the Project Profile.
+- Do not add backward-compatibility code unless it is clearly necessary. If you believe it is required, ask for permission first and briefly explain why.
 
 ## Data modeling
 

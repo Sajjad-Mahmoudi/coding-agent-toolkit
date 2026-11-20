@@ -157,8 +157,9 @@ superseded information that no longer helps readers understand the current syste
 - Use descriptive names for variables and methods.
 - Handle failures explicitly, add useful error context, and avoid silently discarding errors.
 - Keep dependencies and lifecycle behavior explicit; avoid unexpected initialization or import-time side effects.
-- Prefer clear, direct implementations. Add comments or docstrings only to explain non-obvious behavior, important
-  decisions, or public interfaces.
+- Prefer clear, direct implementations.
+- Add a concise one-line comment at the top of each module and above every main class, function, or significant block
+  to state its purpose. Keep it short and factual.
 
 ## Change Planning and Commits
 
