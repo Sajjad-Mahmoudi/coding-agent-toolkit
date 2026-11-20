@@ -1,10 +1,11 @@
 # Python practices
 
-Use with the module's [entry point](README.md) and [configuration instructions](configuration.md).
+Use with the module's [entry point](README.md), [project structure](structure.md), and [configuration instructions](configuration.md).
 
 ## Language and tooling
 
 - Target Python 3.14+ for new projects and use modern type hints. Respect an existing project's declared runtime unless a migration is part of the task.
+- Prefer uv for dependency and environment management in new projects. Keep metadata, dependency groups, and lockfiles consistent with the [project structure](structure.md#project-files). Respect an existing project's package manager.
 - Use Ruff for both linting and formatting. Record the project's exact commands and configuration in the Project Profile.
 
 ## Data modeling

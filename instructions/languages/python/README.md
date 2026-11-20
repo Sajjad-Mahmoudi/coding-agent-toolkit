@@ -2,12 +2,13 @@
 
 Apply this module to projects mainly developed in Python, or to Python components in a mixed-language repository. Combine it with the shared root `AGENTS.md`; keep real project paths, commands, and constraints in the Project Profile.
 
-Read both files before working on Python code:
+Read these files before working on Python code:
 
 | File | Scope |
 | --- | --- |
-| [Python practices](practices.md) | Python 3.14+, Ruff, typing, data models, paths, logging, errors, lifecycle, and testing |
-| [Configuration](configuration.md) | Source priority, typed settings, YAML, secrets, CLI overrides, and adding settings |
+| [Project structure](structure.md) | Source layout, dependency metadata, module ownership, optional CLI entry points, and initialization |
+| [Python practices](practices.md) | Python 3.14+, uv, Ruff, typing, data models, paths, logging, errors, lifecycle, and testing |
+| [Configuration](configuration.md) | Settings package, source priority, typed settings, YAML, secrets, CLI overrides, and adding settings |
 
 Apply configuration rules when introducing or changing application configuration. A library or small script with no runtime settings does not need configuration infrastructure solely to satisfy this module.
 

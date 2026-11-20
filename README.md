@@ -8,7 +8,7 @@ A reusable toolkit for AI coding agents: project instructions, setup prompts, an
 | --- | --- | --- |
 | [AGENTS.md template](templates/AGENTS.template.md) | Shared engineering policies, specification documentation, and an agent-maintained Project Profile | Every project |
 | [Initialisation prompt](prompts/initialisation.md) | Principal-engineer role and project scaffolding workflow | Starting or deliberately restructuring a project |
-| [Python instructions](instructions/languages/python/README.md) | Python practices and typed runtime configuration | Projects mainly developed in Python, or their Python components |
+| [Python instructions](instructions/languages/python/README.md) | Python project structure, practices, and typed runtime configuration | Projects mainly developed in Python, or their Python components |
 | [Architecture and extension guide](docs/architecture.md) | Composition, directory responsibilities, and extension conventions | Adopting or extending this toolkit |
 
 ## Start a project
