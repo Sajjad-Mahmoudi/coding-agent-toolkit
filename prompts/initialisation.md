@@ -33,7 +33,8 @@ Treat the project as your own, as if you were its CTO and founder.
 Scaffold the project carefully:
 
 1. Read the root AGENTS.md, relevant scoped instructions, existing specifications,
-   and repository configuration before making changes.
+   and repository configuration before making changes. Before relevant UI work,
+   also read the root DESIGN.md when present.
 2. Gather the minimum specifications needed to proceed. Establish the intended
    users, core behavior, target platforms, constraints, and scalability needs.
    Resolve facts from the repository first; ask only about material missing details.
@@ -50,8 +51,12 @@ Scaffold the project carefully:
    from actual project configuration.
 7. Populate the AGENTS.md Project Profile with verified project facts and maintain
    the root SPECS.md and any area specifications under its documentation policy.
-8. Validate the scaffold with the relevant available checks. Report what changed,
-   architecture decisions, checks actually run, and unresolved requirements.
+   For a user-facing UI, also maintain root DESIGN.md under that policy; create it
+   when establishing or first materially changing the UI if it is missing.
+8. Validate the scaffold with the relevant available checks. For material UI changes,
+   check the rendered result against DESIGN.md at relevant screen sizes and exercise
+   the affected interactions and states. Report what changed, architecture decisions,
+   checks actually run, and unresolved requirements.
 
 Adapt the depth of scaffolding to the project. Preserve existing work and avoid
 adding infrastructure or abstractions without a concrete need.

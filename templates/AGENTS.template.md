@@ -12,8 +12,25 @@ relevant directory and link to it from the root specification. Use descriptive n
 organize these files around cohesive areas, such as an API layer, user interface, or data processing pipeline,
 rather than individual source files.
 
-Update the specifications alongside the application to reflect its current intended state. Document each topic
+Projects with a user-facing UI must also maintain a root `DESIGN.md` as their visual and interaction reference.
+Projects without a UI may omit it.
+
+Update these documents alongside the application to reflect its current intended state. Document each topic
 in one appropriate place, use links instead of repeating details, and keep shared rules and decisions consistent.
+
+### UI Design Guidance
+
+- Read root `DESIGN.md` before relevant visual or interaction work. If it is missing, create it when establishing
+  the UI or first materially changing it. For an existing product, use approved screens, shared components,
+  design tokens, and existing design decisions as sources. Flag material uncertainties for review.
+- Keep product behavior, business rules, and technical architecture in `SPECS.md` and its area specifications.
+  Use `DESIGN.md` for visual and interaction guidance: reference screens; typography; color and spacing roles;
+  component patterns and states; responsive layouts; and accessibility.
+- Link `DESIGN.md` from the root specification and link back to relevant behavior specifications. Link to existing
+  screens, tokens, components, and design sources for detail so each decision has one place to maintain it.
+- Update `DESIGN.md` in the same change whenever an intended UI design decision changes.
+- For material UI changes, check the rendered result against the design guidance at relevant screen sizes and
+  exercise the affected interactions and states.
 
 ### Documentation Philosophy
 
@@ -32,16 +49,17 @@ Favor concepts and rationale. Include technical details when they clarify behavi
 
 ### Source of Truth
 
-Source code is authoritative for what is currently implemented. The root and area specifications describe the intended
-behavior, business rules, and design within their respective scopes.
+Source code is authoritative for what is currently implemented. The root and area specifications describe intended
+behavior, business rules, technical design, and architecture within their respective scopes. Where applicable,
+`DESIGN.md` describes intended visual and interaction guidance.
 
 When the implementation and documentation differ, investigate the relevant requirements and design decisions:
 
-- if the implementation reflects the intended behavior, update the affected specifications;
-- if the implementation is wrong, correct it and revise the specifications only if they also need clarification;
-- if the intended behavior is unclear or specifications conflict, resolve the ambiguity before making changes.
+- if the implementation reflects the intended behavior or design, update the affected documents;
+- if the implementation is wrong, correct it and revise the documents only if they also need clarification;
+- if the intended behavior or design is unclear or documents conflict, resolve the ambiguity before making changes.
 
-Do not assume existing behavior is correct simply because it is implemented, or change specifications merely to match
+Do not assume existing behavior is correct simply because it is implemented, or change documentation merely to match
 the code. Keep affected documents consistent when resolving a discrepancy.
 
 ### Maintenance
@@ -63,7 +81,7 @@ Purely internal refactoring does not require documentation changes unless it aff
 constraints, or architecture.
 
 When work is delegated, the coordinating agent remains responsible for reviewing the completed work and ensuring
-the affected specifications reflect the integrated result.
+the affected documents reflect the integrated result.
 
 ### Update Strategy
 
