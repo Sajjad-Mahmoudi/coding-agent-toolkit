@@ -6,7 +6,7 @@ A reusable toolkit for AI coding agents: project instructions, setup prompts, an
 
 | Resource | Purpose | When to use it |
 | --- | --- | --- |
-| [AGENTS.md template](templates/AGENTS.template.md) | Shared engineering policies, specification documentation, and an agent-maintained Project Profile | Every project |
+| [AGENTS.md template](templates/AGENTS.template.md) | Shared engineering policies, specification and UI design documentation, and an agent-maintained Project Profile | Every project |
 | [Initialisation prompt](prompts/initialisation.md) | Principal-engineer role and project scaffolding workflow | Starting or deliberately restructuring a project |
 | [Python instructions](instructions/languages/python/README.md) | Python project structure, practices, and typed runtime configuration | Projects mainly developed in Python, or their Python components |
 | [Architecture and extension guide](docs/architecture.md) | Composition, directory responsibilities, and extension conventions | Adopting or extending this toolkit |
@@ -16,7 +16,8 @@ A reusable toolkit for AI coding agents: project instructions, setup prompts, an
 1. Copy `templates/AGENTS.template.md` to the project root as `AGENTS.md`. If one already exists, merge the relevant policies and preserve its project-specific instructions.
 2. Use the [initialisation prompt](prompts/initialisation.md) to ask the agent to inspect the project, gather the minimum missing specifications, and establish its architecture and toolchain.
 3. Ask the agent to populate and maintain the Project Profile from verified repository facts. Mark unconfirmed facts explicitly; the user should not need to supply information already in the repository.
-4. Add the language modules the project needs. Keep shared policies in the base template and language-specific rules in their modules.
+4. Maintain `SPECS.md` and relevant `SPECS-<area>.md` files. For projects with a user-facing UI, also read and maintain root `DESIGN.md`; create it when establishing or first materially changing the UI, following the [UI design guidance](templates/AGENTS.template.md#ui-design-guidance).
+5. Add the language modules the project needs. Keep shared policies in the base template and language-specific rules in their modules.
 
 ## Add Python guidance
 
